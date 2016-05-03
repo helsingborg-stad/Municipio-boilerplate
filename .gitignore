@@ -4,6 +4,7 @@ wp/
 vendor/
 wp-content/*
 !wp-content/object-cache.php
+composer.lock
 
 
 # Compiled source #
