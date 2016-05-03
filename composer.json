@@ -46,8 +46,8 @@
     "require": {
         "composer/installers": "~1.0",
         "johnpbloch/wordpress": "4.5.1",
-        "helsingborg-stad/Modularity": ">=1.0.0",
-        "helsingborg-stad/Municipio": ">=1.0.0",
+        "helsingborg-stad/modularity": ">=1.0.0",
+        "helsingborg-stad/municipio": ">=1.0.0",
         "helsingborg-stad/lix-calculator": ">=1.0.1",
         "helsingborg-stad/custom-short-links": ">=1.0.0",
         "helsingborg-stad/readspeaker-helper": ">=1.0.0",
@@ -64,5 +64,11 @@
             "wp-content/plugins/{$name}": ["type:wordpress-plugin"],
             "wp-content/themes/{$name}": ["type:wordpress-theme"]
         }
+    },
+
+    "scripts": {
+        "post-install-cmd": [
+            "mkdir -p wp-content/uploads/cache/blade-cache"
+        ]
     }
 }
