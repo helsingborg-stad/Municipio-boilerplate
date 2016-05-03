@@ -2,19 +2,9 @@
 ##########################
 wp/
 vendor/
+wp-content/*
+!wp-content/object-cache.php
 
-wp-content/plugins/acf
-wp-content/plugins/all-in-one-seo-pack
-wp-content/plugins/custom-short-links
-wp-content/plugins/lix-calculator
-wp-content/plugins/modularity
-wp-content/plugins/readspeaker-helper
-wp-content/plugins/stream
-wp-content/plugins/varnish-http-purge
-wp-content/plugins/wp-editor-widget
-wp-content/plugins/wp-nested-pages
-
-wp-content/themes/municipio
 
 # Compiled source #
 ###################
