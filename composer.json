@@ -59,6 +59,7 @@
     },
 
     "extra": {
+        "path": "/",
         "wordpress-install-dir": "wp",
         "installer-paths": {
             "wp-content/plugins/{$name}": ["type:wordpress-plugin"],
