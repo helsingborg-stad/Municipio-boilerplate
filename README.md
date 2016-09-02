@@ -16,7 +16,8 @@ Make sure you have [Composer](http://www.getcomposer.org) installed on your mach
 5. Run ```mv config/database-example.php config/database.php``` to rename the database config file. Then open it in a text editor of your choise.
 6. Fill in your database details and change the ```$table_prefix``` variable value to the table prefix you want on your database tables.
 7. ```mv config/salts-example.php config/salts.php``` to rename the salts config file. Then open it in a text editor of your choise.
-8. Go to https://api.wordpress.org/secret-key/1.1/salt/ to generate salts (or do it manually). Copy and paste (replace old) to the salts config file.
+8. ```mv config/cache-example.php config/cache.php``` to rename the salts config file. Then open it in a text editor of your choise.
+9. Go to https://api.wordpress.org/secret-key/1.1/salt/ to generate salts (or do it manually). Copy and paste (replace old) to the salts config file.
 
 ### Multisite?
 
