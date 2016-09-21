@@ -13,7 +13,7 @@ class composerNetworkAdmin
 {
     public function __construct()
     {
-        if (is_multisite() && defined(SUBDOMAIN_INSTALL) && SUBDOMAIN_INSTALL) {
+        if (is_multisite()) {
             add_filter('network_admin_url', array($this, 'sanitizeNetworkAdminUrl'), 50, 2);
             add_filter('admin_url', array($this, 'sanitizeAdminUrl'), 50, 3);
         }
