@@ -18,13 +18,22 @@
  * @package WordPress
  */
 
-require_once 'config/cookie.php';
 require_once 'config/content.php';
 require_once 'config/database.php';
 require_once 'config/salts.php';
 require_once 'config/plugins.php';
 require_once 'config/update.php';
 require_once 'config/upload.php';
+
+/**
+ * Cookie settings
+ *
+ * To enable this site as a multisite please rename the config/cookie-example.php file to
+ * cookie.php, then go ahead and edit the configurations
+ */
+if (file_exists(__DIR__ . '/config/cookie.php')) {
+    require_once 'config/cookie.php';
+}
 
 /**
  * Cache settings

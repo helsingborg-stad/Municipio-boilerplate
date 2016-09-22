@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "\033[35mWelcom to the Municipio boilerplate setup. Please follow the steps in this setup guide in order to set up your wp-config.\033[0m"
+echo "\033[35mWelcom to the Municipio boilerplate setup.\nPlease follow the steps in this setup guide in order to set up your wp-config.\033[0m"
 
 #
 ##
@@ -8,17 +8,20 @@ echo "\033[35mWelcom to the Municipio boilerplate setup. Please follow the steps
 ##
 #
 
-echo "\033[34m\033[1mDatabase host:\033[0m "
+echo "\n\033[34m\033[1mDatabase host:\033[0m "
 read db_host
 
-echo "\033[34m\033[1mDatabase name:\033[0m "
+echo "\n\033[34m\033[1mDatabase name:\033[0m "
 read db_name
 
-echo "\033[34m\033[1mDatabase user:\033[0m "
+echo "\n\033[34m\033[1mDatabase user:\033[0m "
 read db_user
 
-echo "\033[34m\033[1mDatabase password:\033[0m "
+echo "\n\033[34m\033[1mDatabase password:\033[0m "
 read db_password
+
+echo "\n\033[34m\033[1mDatabase table prefix:\033[0m "
+read table_prefix
 
 # Copy/replace database-example.php to database.php
 mv ./config/database-example.php ./config/database.php
@@ -27,7 +30,22 @@ mv ./config/database-example.php ./config/database.php
 find ./config/database.php -type f ! -name "setup.sh" -exec sed -i '' -e "s/(#db_host#)/$db_host/g" {} >/dev/null 2>&1 \;
 find ./config/database.php -type f ! -name "setup.sh" -exec sed -i '' -e "s/(#db_name#)/$db_name/g" {} >/dev/null 2>&1 \;
 find ./config/database.php -type f ! -name "setup.sh" -exec sed -i '' -e "s/(#db_user#)/$db_user/g" {} >/dev/null 2>&1 \;
-find ./config/database.php -type f ! -name "setup.sh" -exec sed -i '' -e "s/(#db_password#)/$db_password/g" {} >/dev/null 2>&1 \;
+find ./config/database.php -type f ! -name "setup.sh" -exec sed -i '' -e "s:(#db_password#):$db_password:g" {} >/dev/null 2>&1 \;
+find ./config/database.php -type f ! -name "setup.sh" -exec sed -i '' -e "s/(#table_prefix#)/$table_prefix/g" {} >/dev/null 2>&1 \;
+
+
+
+#
+##
+### COOKIE DOMAIN
+##
+#
+
+echo "\n\033[34m\033[1mCookie domain (usally same as website url):\033[0m "
+read cookie_domain
+
+mv ./config/cookie-example.php ./config/cookie.php
+find ./config/cookie.php -type f ! -name "setup.sh" -exec sed -i '' -e "s:(#cookie_domain#):$cookie_domain:g" {} >/dev/null 2>&1 \;
 
 #
 ##
@@ -35,16 +53,16 @@ find ./config/database.php -type f ! -name "setup.sh" -exec sed -i '' -e "s/(#db
 ##
 #
 
-echo "\033[34m\033[1mComposer name (vendor/package):\033[0m "
+echo "\n\033[34m\033[1mComposer name (vendor/package):\033[0m "
 read composer_project
 
-echo "\033[34m\033[1mComposer license:\033[0m "
+echo "\n\033[34m\033[1mComposer license:\033[0m "
 read composer_license
 
-echo "\033[34m\033[1mComposer author name:\033[0m "
+echo "\n\033[34m\033[1mComposer author name:\033[0m "
 read composer_author_name
 
-echo "\033[34m\033[1mComposer author email:\033[0m "
+echo "\n\033[34m\033[1mComposer author email:\033[0m "
 read composer_author_email
 
 find ./composer.json -type f ! -name "setup.sh" -exec sed -i '' -e "s:(#composer_project#):$composer_project:g" {} >/dev/null 2>&1 \;
@@ -52,7 +70,12 @@ find ./composer.json -type f ! -name "setup.sh" -exec sed -i '' -e "s/(#composer
 find ./composer.json -type f ! -name "setup.sh" -exec sed -i '' -e "s/(#composer_author_name#)/$composer_author_name/g" {} >/dev/null 2>&1 \;
 find ./composer.json -type f ! -name "setup.sh" -exec sed -i '' -e "s/(#composer_author_email#)/$composer_author_email/g" {} >/dev/null 2>&1 \;
 
-echo "\033[34m\033[1mAnswer the following questions with y/n…\033[0m "
+
+
+
+
+
+echo "\n\033[34m\033[1mAnswer the following questions with y/n…\033[0m "
 
 #
 ##
@@ -119,7 +142,7 @@ esac
 ### TIME CONSUMING TASKS COMES LAST
 ##
 #
-echo "\033[34m\033[1mLean back while I set things up…\033[0m"
+echo "\n\033[34m\033[1mLean back while I set things up…\033[0m"
 
 # Run composer install
 composer install
@@ -140,7 +163,7 @@ find . -maxdepth 1 -name '*.DS_Store' -delete
 
 # All done
 if [ "$multisite_prepare" == "true" ]; then
-    echo "\n\033[43m\033[1mNote: to complete the multisite setup you will need to run the multisite installation through wp-admin after the standard WordPress install is completed.\033[0m\n"
+    echo "\n\n\033[43m\033[1mNote: to complete the multisite setup you will need to run the multisite installation through wp-admin after the standard WordPress install is completed.\033[0m\n"
 fi
 
-echo "\033[92m\033[1mAll done. Please go ahead and run the WordPress install in your browser.\033[0m"
+echo "\n\033[92m\033[1mAll done. Please go ahead and run the WordPress install in your browser.\033[0m"
