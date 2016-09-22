@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "\033[35mWelcom to the Municipiooilerplate setup. Please follow the steps in this setup guide in order to set up your wp-config.\033[0m"
+echo "\033[35mWelcom to the Municipio boilerplate setup. Please follow the steps in this setup guide in order to set up your wp-config.\033[0m"
 
 #
 ##

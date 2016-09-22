@@ -7,7 +7,7 @@ A boilerplate that installs WordPress together with themes and plugins for creat
 
 This is a simple guide on how to get started with the Municipio Boilerplate.
 
-Make sure you have [Composer](http://www.getcomposer.org) installed on your machine.
+Make sure you have [Composer](http://www.getcomposer.org) installed on your machine. If you are using Windows, make shure to install bash. 
 
 1. Clone or download the repository.
 2. Open a terminal window and ```cd``` to the project folder.
