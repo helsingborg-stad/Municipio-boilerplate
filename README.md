@@ -9,18 +9,8 @@ This is a simple guide on how to get started with the Municipio Boilerplate.
 
 Make sure you have [Composer](http://www.getcomposer.org) installed on your machine.
 
-1. Open the ```composer.json``` file and change the ```name``` and ```authors``` values.
-2. In the Terminal, ```cd``` to the Municipio Boilerplate folder on your system.
-3. Install Composer dependencies by running ```composer install```.
-4. Wait until all dependencies have been installed.
-5. Run ```mv config/database-example.php config/database.php``` to rename the database config file. Then open it in a text editor of your choise.
-6. Fill in your database details and change the ```$table_prefix``` variable value to the table prefix you want on your database tables.
-7. ```mv config/salts-example.php config/salts.php``` to rename the salts config file. Then open it in a text editor of your choise.
-8. ```mv config/cache-example.php config/cache.php``` to rename the salts config file. Then open it in a text editor of your choise.
-9. Go to https://api.wordpress.org/secret-key/1.1/salt/ to generate salts (or do it manually). Copy and paste (replace old) to the salts config file.
-
-### Multisite?
-
-If you want your install to be a multisite, please follow the above "getting started" stes and then do the following:
-
-1. Run ```mv config/multisite-example.php config/multisite.php``` to rename the multisite config file.
+1. Clone or download the repository.
+2. Open a terminal window and ```cd``` to the project folder.
+3. Run ```sh setup.sh``` and complete the setup guide. The guide will help you prepare your wp-config and install required components.
+4. Visit your site url and run the WordPress install
+5. (Optional) If you're setting up a multisite, go ahead and run the network setup guide via wp-admin. You will find it in the "tools" menu in wp-admin.

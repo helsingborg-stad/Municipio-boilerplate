@@ -1,10 +1,10 @@
 {
-    "name": "helsingborg-stad/municipio-boilerplate",
-    "license": "GNU",
+    "name": "(#composer_project#)",
+    "license": "(#composer_license#)",
     "authors": [
         {
-            "name": "Helsingborg Stad",
-            "email": "webbredaktionen@helsingborg.se"
+            "name": "(#composer_author_name#)",
+            "email": "(#composer_author_email#)"
         }
     ],
     "minimum-stability" : "stable",
@@ -53,7 +53,7 @@
 
     "require": {
         "composer/installers": "~1.0",
-        "johnpbloch/wordpress": "4.5.1",
+        "johnpbloch/wordpress": "^4.5.1",
         "helsingborg-stad/modularity": ">=1.0.0",
         "helsingborg-stad/municipio": ">=1.0.0",
         "helsingborg-stad/lix-calculator": ">=1.0.1",

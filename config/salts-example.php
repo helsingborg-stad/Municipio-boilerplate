@@ -1,6 +1,6 @@
 <?php
 
-/**#@+
+/**
  * Authentication Unique Keys and Salts.
  *
  * Change these to different unique phrases!

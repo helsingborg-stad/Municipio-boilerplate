@@ -4,13 +4,13 @@
  * Use local varnish server.
  * @var string
  */
-define('VHP_VARNISH_IP', '127.0.0.1');
+define('VHP_VARNISH_IP', '(#cache_varnish_ip#)');
 
 /**
  * Use memcached.
  * @var bool
  */
-//define('WP_USE_MEMCACHED', true);
+define('WP_USE_MEMCACHED', (#cache_memcached#));
 
 /**
 * Memcache key salt

@@ -22,10 +22,19 @@ require_once 'config/cookie.php';
 require_once 'config/content.php';
 require_once 'config/database.php';
 require_once 'config/salts.php';
-require_once 'config/cache.php'; // Require after salts.php since it uses NONCE_KEY
 require_once 'config/plugins.php';
 require_once 'config/update.php';
 require_once 'config/upload.php';
+
+/**
+ * Cache settings
+ *
+ * To enable this site as a multisite please rename the config/cache-example.php file to
+ * cache.php, then go ahead and edit the configurations
+ */
+if (file_exists(__DIR__ . '/config/cache.php')) {
+    require_once 'config/cache.php';
+}
 
 /**
  * Multisite settings

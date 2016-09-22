@@ -9,7 +9,7 @@ Author:         Sebastian Thulin
 
 namespace ComposerNetworkAdmin;
 
-class composerNetworkAdmin
+class ComposerNetworkAdmin
 {
     public function __construct()
     {
