@@ -1,0 +1,30 @@
+# Admin redirect
+RedirectMatch 301 /admin/(.*) /wp/wp-admin/$1
+
+# Prevent access to XML RPC & Pingback
+<FilesMatch "^(xmlrpc\.php|wp-trackback\.php)">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Remove author pages
+<IfModule mod_rewrite.c>
+    RewriteCond %{QUERY_STRING} ^author=([0-9]){1,}$ [NC]
+    RewriteRule ^(.*)$ $1?author=999999 [L]
+</ifModule>
+
+# Remove spam refereals
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_REFERER} ^.*(ranksonic\.|semalt\.|kambasoft\.|buttons-for-website\.|buttons-for-your-website\.com|4webmasters\.org|social-buttons\.com|best-seo-offer\.com|best-seo-solution\.com).*$ [NC]
+    RewriteRule ^(.*)$ - [F]
+</ifModule>
+
+# Prevent drive-by-download attacks
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options nosniff
+</IfModule>
+
+# Prevent clickjacking attempts
+<IfModule mod_headers.c>
+    Header always append X-Frame-Options SAMEORIGIN
+</IfModule>
