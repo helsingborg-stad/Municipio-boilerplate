@@ -46,6 +46,10 @@
             "url": "https://github.com/helsingborg-stad/broken-link-detector.git"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse.git"
+        },
+        {
             "type":"composer",
             "url":"https://wpackagist.org"
         }
@@ -61,6 +65,7 @@
         "helsingborg-stad/readspeaker-helper": ">=1.0.0",
         "helsingborg-stad/content-scheduler": ">=1.0.0",
         "helsingborg-stad/broken-link-detector": ">=1.0.0",
+        "helsingborg-stad/acf-ux-collapse": ">=1.0.0",
         "wpackagist-plugin/wp-editor-widget": "^0.5.5",
         "wpackagist-plugin/all-in-one-seo-pack": "^2.2.7.5",
         "wpackagist-plugin/varnish-http-purge": "^3.7.2",
