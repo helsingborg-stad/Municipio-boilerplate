@@ -47,6 +47,10 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/helsingborg-stad/better-post-UI.git"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/helsingborg-stad/ACF-UX-collapse.git"
         },
         {
@@ -65,6 +69,7 @@
         "helsingborg-stad/readspeaker-helper": ">=1.0.0",
         "helsingborg-stad/content-scheduler": ">=1.0.0",
         "helsingborg-stad/broken-link-detector": ">=1.0.0",
+        "helsingborg-stad/better-post-ui": ">=1.0.0",
         "helsingborg-stad/acf-ux-collapse": ">=1.0.0",
         "wpackagist-plugin/wp-editor-widget": "^0.5.5",
         "wpackagist-plugin/all-in-one-seo-pack": "^2.2.7.5",
