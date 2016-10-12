@@ -31,3 +31,8 @@ define('AUTOSAVE_INTERVAL', 120);
  * @var integer
  */
 define('EMPTY_TRASH_DAYS', 30);
+
+/**
+ * Disable the WordPress theme/plugin editor
+ */
+define('DISALLOW_FILE_EDIT', true);
