@@ -2,7 +2,7 @@
 
 /*
 Plugin Name:    Composer WordPress Network URL
-Description:    Fixes issues with network-admin & home url when using wp-composer setup.
+Description:    Fixes issues with network-admin url when using wp-composer setup.
 Version:        1.0
 Author:         Sebastian Thulin
 */
@@ -13,15 +13,17 @@ class ComposerNetworkAdmin
 {
     public function __construct()
     {
-        if (is_multisite()) {
+        if (is_multisite() && defined(SUBDOMAIN_INSTALL) && SUBDOMAIN_INSTALL) {
             add_filter('network_admin_url', array($this, 'sanitizeNetworkAdminUrl'), 50, 2);
             add_filter('admin_url', array($this, 'sanitizeAdminUrl'), 50, 3);
         }
 
-        //Remove /wp from home_url.
-        add_filter('option_home', function ($url) {
-            return preg_replace('/\/wp$/', '', $url);
-        });
+        //add_filter('login_url', array($this, 'sanitizeLoginUrl'), 10, 2);
+    }
+
+    public function sanitizeLoginUrl($login_url, $redirect)
+    {
+        return home_url('/wp/wp-login.php?redirect_to=' . $redirect);
     }
 
     public function sanitizeAdminUrl($url, $path, $blog_id)
