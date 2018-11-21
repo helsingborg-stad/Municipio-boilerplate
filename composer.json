@@ -10,72 +10,20 @@
     "minimum-stability" : "stable",
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/Modularity.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/Municipio.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/xcap-import.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/lix-calculator.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/open-hours.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/custom-short-links.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/readspeaker-helper.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/content-scheduler.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/broken-link-detector.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/better-post-UI.git"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/helsingborg-stad/ACF-UX-collapse.git"
+            "type":"composer",
+            "url":"https://wpackagist.org"
         },
         {
             "type":"composer",
-            "url":"https://wpackagist.org"
+            "url":"https://packagist.org"
         }
     ],
 
     "require": {
         "composer/installers": "~1.0",
-        "johnpbloch/wordpress": "^4.6.0",
-        "helsingborg-stad/modularity": ">=1.0.0",
-        "helsingborg-stad/municipio": ">=1.0.0",
-        "helsingborg-stad/lix-calculator": ">=1.0.1",
-        "helsingborg-stad/custom-short-links": ">=1.0.0",
-        "helsingborg-stad/readspeaker-helper": ">=1.0.0",
-        "helsingborg-stad/content-scheduler": ">=1.0.0",
-        "helsingborg-stad/broken-link-detector": ">=1.0.0",
-        "helsingborg-stad/better-post-ui": ">=1.0.0",
-        "helsingborg-stad/acf-ux-collapse": ">=1.0.0",
-        "wpackagist-plugin/wp-editor-widget": "^0.5.5",
-        "wpackagist-plugin/all-in-one-seo-pack": "^2.2.7.5",
-        "wpackagist-plugin/varnish-http-purge": "^3.7.2",
-        "wpackagist-plugin/stream": "^3.0.4",
-        "wpackagist-plugin/wp-nested-pages": "^1.5.4"
+        "johnpbloch/wordpress": "^4.9.0",
+        "helsingborg-stad/modularity": ">=2.0.0",
+        "helsingborg-stad/municipio": ">=1.0.0"
     },
 
     "extra": {
